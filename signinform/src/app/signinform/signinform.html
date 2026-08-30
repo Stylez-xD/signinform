@@ -1,0 +1,23 @@
+<h2>Sign Up</h2>
+
+<form (ngSubmit)="submitForm()">
+
+  <label>First Name</label>
+  <input type="text" name="firstName" [(ngModel)]="firstName" pattern="[A-Za-z]+" required>
+ <label>Last Name</label>
+  <input type="text" name="lastName" [(ngModel)]="lastName" pattern="[A-Za-z]+" required>
+  <label>Email</label>
+   <input type="email" name="email" [(ngModel)]="email" required>
+  <label>Phone Number</label>
+  <input type="text" name="phone" [(ngModel)]="phone" pattern="^(\+[1-9][0-9]{12}|[1-9][0-9]{9})$" required>
+
+  <label>Password</label>
+     <input type="password" name="password" [(ngModel)]="password" pattern="^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[@#$&!]).{6,}$" required>
+  <label>Repeat Password</label>
+     <input type="password" name="repeatPassword" [(ngModel)]="repeatPassword" required>
+  <label>Pincode</label>
+   <input type="text" name="pincode" [(ngModel)]="pincode" required>
+
+ <button type="submit">Submit</button>
+
+</form>
